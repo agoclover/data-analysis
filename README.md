@@ -1,14 +1,9 @@
 # data-analysis
 
-Udacity Data Analysis
+Udacity Data Analysis lessons
 
-## Python
-
-refer to __Python Data Analytics__ written by Fabio Nelli. Notes are below:
-
-1. [chapter3_NumPy](https://github.com/agoclover/data-analysis/blob/master/notes_chapter3_numpy.md#3-numpy%E5%BA%93)
-2. [chapter4_Pandas](https://github.com/agoclover/data-analysis/blob/master/notes_chapter4_pandas.md#4-pandas)
-3. to be continued.
+Udacity—数据分析（入门）旧版课程大纲：https://mubu.com/doc/2nOkGMljsl
+Udacity—数据分析（进阶）旧版课程大纲：https://mubu.com/doc/3rir3GN6Ll
 
 ## Statistics
 
@@ -47,3 +42,33 @@ Statistics Notes
 ### 项目：测试心理学现象
 
 项目在官方的[GitHub](https://github.com/udacity/new-dand-advanced-china/blob/master/%E6%A3%80%E9%AA%8C%E5%BF%83%E7%90%86%E5%AD%A6%E7%8E%B0%E8%B1%A1/%E7%BB%9F%E8%AE%A1%E5%AD%A6%EF%BC%9A%E6%A3%80%E9%AA%8C%E5%BF%83%E7%90%86%E5%AD%A6%E7%8E%B0%E8%B1%A1.md)中，新旧版课程项目一致。
+
+## Python
+
+### Fabio Nelli
+
+refer to __Python Data Analytics__ written by Fabio Nelli. Notes are below:
+
+1. [chapter3_NumPy](https://github.com/agoclover/data-analysis/blob/master/notes_chapter3_numpy.md#3-numpy%E5%BA%93)
+2. [chapter4_Pandas](https://github.com/agoclover/data-analysis/blob/master/notes_chapter4_pandas.md#4-pandas)
+3. to be continued.
+
+### Udacity
+
+#### Python 数据分析入门
+
+以udacity学生学习参与数据为例，数据集：
+
+1. enrollments.csv
+2. daily_engagement.csv
+3. project_submissions.csv
+
+用Jupyter Notebook所做的数据分析报告：
+
+Getting started with data analysis.ipynb
+
+#### NumPy 和 Pandas 分析一维数据
+
+#### NumPy 和 Pandas 分析二维数据
+
+#### Project：探索数据集
