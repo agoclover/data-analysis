@@ -3,6 +3,7 @@
 Udacity Data Analysis lessons
 
 Udacity—数据分析（入门）旧版课程大纲：https://mubu.com/doc/2nOkGMljsl
+
 Udacity—数据分析（进阶）旧版课程大纲：https://mubu.com/doc/3rir3GN6Ll
 
 ## Statistics
@@ -11,7 +12,9 @@ Udacity—数据分析（进阶）旧版课程大纲：https://mubu.com/doc/3rir
 
 但是，为了更好地记录所学的知识，我将以下两部分的笔记内容放在了《概率论与数理统计》的框架内，以便形成更好的知识体系。
 
-Statistics Notes
+但这一部分是用Typora进行记录，所以一些图片和Latex公式显示不成功，我会在这部分笔记整个完成后上传PDF版本的笔记。
+
+[Statistics Notes](https://github.com/agoclover/data-analysis/blob/master/Statistics%20Notes.md)
 
 ### 描述统计学
 
@@ -59,13 +62,13 @@ refer to __Python Data Analytics__ written by Fabio Nelli. Notes are below:
 
 以udacity学生学习参与数据为例，数据集：
 
-1. enrollments.csv
-2. daily_engagement.csv
-3. project_submissions.csv
+1. [enrollments.csv](https://github.com/agoclover/data-analysis/blob/master/enrollments.csv)
+2. [daily_engagement.csv](https://github.com/agoclover/data-analysis/blob/master/daily_engagement.csv)
+3. [project_submissions.csv](https://github.com/agoclover/data-analysis/blob/master/project_submissions.csv)
 
 用Jupyter Notebook所做的数据分析报告：
 
-Getting started with data analysis.ipynb
+[Getting started with data analysis.ipynb](https://github.com/agoclover/data-analysis/blob/master/Getting%20started%20with%20data%20analysis.ipynb)
 
 #### NumPy 和 Pandas 分析一维数据
 
