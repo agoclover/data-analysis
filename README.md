@@ -72,6 +72,22 @@ refer to __Python Data Analytics__ written by Fabio Nelli. Notes are below:
 
 #### NumPy 和 Pandas 分析一维数据
 
+指导手册：
+
+numpy_pandas_cheatsheet.pdf
+
+以就业率等数据为例，数据集：
+
+1. [employment_above_15.csv]
+2. [female_completion_rate.csv]
+3. [male_completion_rate.csv]
+4. [gdp_per_capita.csv]
+5. [life_expectancy.csv]
+
+用Jupyter Notebook所做的数据分析报告：
+
+One_dimensional_data_analysis.ipynb
+
 #### NumPy 和 Pandas 分析二维数据
 
 #### Project：探索数据集
