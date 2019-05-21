@@ -95,4 +95,8 @@ refer to __Python Data Analytics__ written by Fabio Nelli. Notes are below:
 1. [nyc-subway-weather.csv](https://github.com/agoclover/data-analysis/blob/master/python/nyc-subway-weather.csv)
 2. [nyc-subway-weather-descriptions.pdf](https://github.com/agoclover/data-analysis/blob/master/python/nyc-subway-weather-descriptions.pdf)
 
+用Jupyter Notebook所做的数据分析报告：
+
+[Two_dimensional_data_analysis.ipynb](https://github.com/agoclover/data-analysis/blob/master/python/Two_dimensional_data_analysis.ipynb)
+
 #### Project：探索数据集
