@@ -74,20 +74,25 @@ refer to __Python Data Analytics__ written by Fabio Nelli. Notes are below:
 
 指导手册：
 
-numpy_pandas_cheatsheet.pdf
+[numpy_pandas_cheatsheet.pdf](https://github.com/agoclover/data-analysis/blob/master/python/numpy_pandas_cheatsheet.pdf)
 
 以就业率等数据为例，数据集：
 
-1. [employment_above_15.csv]
-2. [female_completion_rate.csv]
-3. [male_completion_rate.csv]
-4. [gdp_per_capita.csv]
-5. [life_expectancy.csv]
+1. [employment_above_15.csv](https://github.com/agoclover/data-analysis/blob/master/python/employment_above_15.csv)
+2. [female_completion_rate.csv](https://github.com/agoclover/data-analysis/blob/master/python/female_completion_rate.csv)
+3. [male_completion_rate.csv](https://github.com/agoclover/data-analysis/blob/master/python/male_completion_rate.csv)
+4. [gdp_per_capita.csv](https://github.com/agoclover/data-analysis/blob/master/python/gdp_per_capita.csv)
+5. [life_expectancy.csv](https://github.com/agoclover/data-analysis/blob/master/python/life_expectancy.csv)
 
 用Jupyter Notebook所做的数据分析报告：
 
-One_dimensional_data_analysis.ipynb
+[One_dimensional_data_analysis.ipynb](https://github.com/agoclover/data-analysis/blob/master/python/One_dimensional_data_analysis.ipynb)
 
 #### NumPy 和 Pandas 分析二维数据
+
+以纽约地铁站客流量数据为例，数据集：
+
+1. [nyc-subway-weather.csv](https://github.com/agoclover/data-analysis/blob/master/python/nyc-subway-weather.csv)
+2. [nyc-subway-weather-descriptions.pdf](https://github.com/agoclover/data-analysis/blob/master/python/nyc-subway-weather-descriptions.pdf)
 
 #### Project：探索数据集
