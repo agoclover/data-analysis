@@ -100,3 +100,15 @@ refer to __Python Data Analytics__ written by Fabio Nelli. Notes are below:
 [Two_dimensional_data_analysis.ipynb](https://github.com/agoclover/data-analysis/blob/master/python/Two_dimensional_data_analysis.ipynb)
 
 #### Project：探索数据集
+
+## SQL
+
+通过学习MySql数据库，并使用Navicat数据库图形化软件来学习SQL。
+
+课程为[网易公开课-Mysql8数据库基础入门教程](https://study.163.com/course/courseMain.htm?courseId=1005932016)。
+
+以下为课程笔记或资料：
+
+1. [learning_notes_mysql.MD](https://github.com/agoclover/data-analysis/blob/master/sql/learning_notes_mysql.MD)
+2. [GUIDE1.xmind](https://github.com/agoclover/data-analysis/blob/master/sql/GUIDE1.xmind)
+3. [GUIDE2.xmind](https://github.com/agoclover/data-analysis/blob/master/sql/GUIDE2.xmind)
