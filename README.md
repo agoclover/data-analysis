@@ -112,3 +112,10 @@ refer to __Python Data Analytics__ written by Fabio Nelli. Notes are below:
 1. [learning_notes_mysql.MD](https://github.com/agoclover/data-analysis/blob/master/sql/learning_notes_mysql.MD)
 2. [GUIDE1.xmind](https://github.com/agoclover/data-analysis/blob/master/sql/GUIDE1.xmind)
 3. [GUIDE2.xmind](https://github.com/agoclover/data-analysis/blob/master/sql/GUIDE2.xmind)
+
+# R
+
+学士课程链接为：[阿雷边学边教](https://www.bilibili.com/video/av6268508)
+
+以下为课程笔记或资料：
+1. [notes_R_basic_data_management.md](https://github.com/agoclover/data-analysis/blob/master/R/notes_R_basic_data_management.md)
