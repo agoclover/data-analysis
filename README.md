@@ -119,3 +119,4 @@ refer to __Python Data Analytics__ written by Fabio Nelli. Notes are below:
 
 以下为课程笔记或资料：
 1. [notes_R_basic_data_management.md](https://github.com/agoclover/data-analysis/blob/master/R/notes_R_basic_data_management.md)
+2. [notes_R_ggplot2.md](https://github.com/agoclover/data-analysis/blob/master/R/notes_R_ggplot2.md)
