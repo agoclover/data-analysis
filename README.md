@@ -121,3 +121,4 @@ refer to __Python Data Analytics__ written by Fabio Nelli. Notes are below:
 1. [notes_R_basic_data_management.md](https://github.com/agoclover/data-analysis/blob/master/R/notes_R_basic_data_management.md)
 2. [notes_R_ggplot2.md](https://github.com/agoclover/data-analysis/blob/master/R/notes_R_ggplot2.md)
 3. [notes_R_sample.md](https://github.com/agoclover/data-analysis/blob/master/R/notes_R_sample.md)
+4. [notes_R_4_normal_distribution.md](https://github.com/agoclover/data-analysis/blob/master/R/notes_R_4_normal_distribution.md)
