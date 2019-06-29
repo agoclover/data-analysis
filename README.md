@@ -42,9 +42,13 @@ Udacity—数据分析（进阶）旧版课程大纲：https://mubu.com/doc/3rir
 
 注意：4-7部分无翻译。
 
-### 项目：测试心理学现象
+### 计量经济学
 
-项目在官方的[GitHub](https://github.com/udacity/new-dand-advanced-china/blob/master/%E6%A3%80%E9%AA%8C%E5%BF%83%E7%90%86%E5%AD%A6%E7%8E%B0%E8%B1%A1/%E7%BB%9F%E8%AE%A1%E5%AD%A6%EF%BC%9A%E6%A3%80%E9%AA%8C%E5%BF%83%E7%90%86%E5%AD%A6%E7%8E%B0%E8%B1%A1.md)中，新旧版课程项目一致。
+以西南财经大学庞皓教授的[网课](https://www.bilibili.com/video/av16155564)为参考，以古扎拉蒂等的《计量经济学基础》第五版为参考教材。
+
+本部分内容以R语言实现，具体实现过程将统一放在R语言笔记中。
+
+附件为学习笔记：[Econometrics.xmind](https://github.com/agoclover/data-analysis/blob/master/econometrics.xmind)
 
 ## Python
 
