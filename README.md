@@ -97,7 +97,7 @@ refer to __Python Data Analytics__ written by Fabio Nelli. Notes are below:
 
 ### Project：探索数据集
 
-## SQL
+# SQL
 
 通过学习MySql数据库，并使用Navicat数据库图形化软件来学习SQL。
 
