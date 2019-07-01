@@ -1,24 +1,20 @@
 # data-analysis
 
-Udacity Data Analysis lessons
 
-Udacity—数据分析（入门）旧版课程大纲：https://mubu.com/doc/2nOkGMljsl
-
-Udacity—数据分析（进阶）旧版课程大纲：https://mubu.com/doc/3rir3GN6Ll
 
 ## Statistics
+
+Udacity Data Analysis lessons [入门](https://mubu.com/doc/2nOkGMljsl) + [进阶](https://mubu.com/doc/3rir3GN6Ll)
 
 这部分主要是统计学知识的复习，包含描述统计学和推论统计学。
 
 但是，为了更好地记录所学的知识，我将以下两部分的笔记内容放在了《概率论与数理统计》的框架内，以便形成更好的知识体系。
 
-但这一部分是用Typora进行记录，所以一些图片和Latex公式显示不成功，我会在这部分笔记整个完成后上传PDF版本的笔记。
+但这一部分是用Typora进行记录，并且会不断补充更新内容，其中所以一些图片和Latex公式显示不成功，我会在这部分笔记整个完成后上传PDF版本的笔记。
 
 [Statistics Notes](https://github.com/agoclover/data-analysis/blob/master/statistics/Statistics%20Notes.md)
 
 ### 描述统计学
-
-[课程链接](https://cn.udacity.com/course/intro-to-descriptive-statistics--ud827)
 
 1. 研究方法入门
 2. 数据可视化
@@ -30,8 +26,6 @@ Udacity—数据分析（进阶）旧版课程大纲：https://mubu.com/doc/3rir
 
 ### 推论统计学
 
-[课程链接](https://classroom.udacity.com/courses/ud201)
-
 1. 估计
 2. 假设检验
 3. t检查
@@ -40,19 +34,19 @@ Udacity—数据分析（进阶）旧版课程大纲：https://mubu.com/doc/3rir
 6. 线性回归
 7. 卡方检验
 
-注意：4-7部分无翻译。
-
-### 计量经济学
+## 计量经济学
 
 以西南财经大学庞皓教授的[网课](https://www.bilibili.com/video/av16155564)为参考，以古扎拉蒂等的《计量经济学基础》第五版为参考教材。
 
 本部分内容以R语言实现，具体实现过程将统一放在R语言笔记中。
 
-附件为学习笔记：[Econometrics.xmind](https://github.com/agoclover/data-analysis/blob/master/econometrics.xmind)
+附件为学习笔记：
 
-## Python
+1. [简单线性回归模型](https://github.com/agoclover/data-analysis/blob/master/statistics/2%E7%AE%80%E5%8D%95%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E6%A8%A1%E5%9E%8B.xmind)
 
-### Fabio Nelli
+# Python
+
+## Fabio Nelli
 
 refer to __Python Data Analytics__ written by Fabio Nelli. Notes are below:
 
@@ -60,9 +54,9 @@ refer to __Python Data Analytics__ written by Fabio Nelli. Notes are below:
 2. [chapter4_Pandas](https://github.com/agoclover/data-analysis/blob/master/python/notes_chapter4_pandas.md)
 3. to be continued.
 
-### Udacity
+## Udacity
 
-#### Python 数据分析入门
+### Python 数据分析入门
 
 以udacity学生学习参与数据为例，数据集：
 
@@ -74,7 +68,7 @@ refer to __Python Data Analytics__ written by Fabio Nelli. Notes are below:
 
 [Getting started with data analysis.ipynb](https://github.com/agoclover/data-analysis/blob/master/python/Getting%20started%20with%20data%20analysis.ipynb)
 
-#### NumPy 和 Pandas 分析一维数据
+### NumPy 和 Pandas 分析一维数据
 
 指导手册：
 
@@ -92,7 +86,7 @@ refer to __Python Data Analytics__ written by Fabio Nelli. Notes are below:
 
 [One_dimensional_data_analysis.ipynb](https://github.com/agoclover/data-analysis/blob/master/python/One_dimensional_data_analysis.ipynb)
 
-#### NumPy 和 Pandas 分析二维数据
+### NumPy 和 Pandas 分析二维数据
 
 以纽约地铁站客流量数据为例，数据集：
 
@@ -103,7 +97,7 @@ refer to __Python Data Analytics__ written by Fabio Nelli. Notes are below:
 
 [Two_dimensional_data_analysis.ipynb](https://github.com/agoclover/data-analysis/blob/master/python/Two_dimensional_data_analysis.ipynb)
 
-#### Project：探索数据集
+### Project：探索数据集
 
 ## SQL
 
@@ -126,3 +120,4 @@ refer to __Python Data Analytics__ written by Fabio Nelli. Notes are below:
 2. [notes_R_ggplot2.md](https://github.com/agoclover/data-analysis/blob/master/R/notes_R_ggplot2.md)
 3. [notes_R_sample.md](https://github.com/agoclover/data-analysis/blob/master/R/notes_R_sample.md)
 4. [notes_R_4_normal_distribution.md](https://github.com/agoclover/data-analysis/blob/master/R/notes_R_4_normal_distribution.md)
+5. [notes_R_5_parameter_estimation_hypothesis_testing](https://github.com/agoclover/data-analysis/blob/master/R/notes_R_5_parameter_estimation_hypothesis%20_testing.md)
