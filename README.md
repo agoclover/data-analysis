@@ -111,7 +111,7 @@ refer to __Python Data Analytics__ written by Fabio Nelli. Notes are below:
 
 # R
 
-学士课程链接为：[阿雷边学边教](https://www.bilibili.com/video/av6268508)
+学习课程参考了[阿雷边学边教](https://www.bilibili.com/video/av6268508)，并自己做了大量的补充。从第六章回归分析开始都是自己总结的内容。
 
 以下为课程笔记或资料：
 1. [notes_R_basic_data_management.md](https://github.com/agoclover/data-analysis/blob/master/R/notes_R_basic_data_management.md)
