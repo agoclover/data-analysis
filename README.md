@@ -1,50 +1,58 @@
 # README
 
-## data-analysis
+This repository records my personal experience of learning data analysis, which involves four main sections: **Statistics, Python, R and SQL**. 
 
-### Statistics
+All notes and files that you can easily get access to go through and download, have been uploaded to this repository. These notes refers to a large number of other scholars' research and blog materials which have been listed in detail.
 
-Udacity Data Analysis lessons [入门](https://mubu.com/doc/2nOkGMljsl) + [进阶](https://mubu.com/doc/3rir3GN6Ll)
+Click this website to view the main notes: https://amos-pvt.gitbook.io/data-analysis/
 
-这部分主要是统计学知识的复习，包含描述统计学和推论统计学。
 
-但是，为了更好地记录所学的知识，我将以下两部分的笔记内容放在了《概率论与数理统计》的框架内，以便形成更好的知识体系。
 
-但这一部分是用Typora进行记录，并且会不断补充更新内容，其中所以一些图片和Latex公式显示不成功，我会在这部分笔记整个完成后上传PDF版本的笔记。
+# Statistics
+
+统计学知识是数据分析的理论基础，尽管流行的数据分析工具比如Python和R都有很多现成的包可以使用，但理解其原理是至关重要的，否则很容易出现不考虑样本是否满足某些检验方法而错误套用所造成的严重后果。
+
+这一部分主要包括三个方面，概率论和统计基础，以及线性回归——计量经济学。掌握好这些内容也就掌握了绝大多数数据分析所需要的理论知识。之后，所学习的数据挖掘内容会在其他仓库中记录和展示。
+
+## Probability Theory
+
+概率论是数理统计的基石。
+
+本部分内容主要参考浙江大学《概率论与数理统计》和茆诗松《概率论与数理统计教程》，并以浙大教材目录为主。但笔记内容并不是全部照抄书本内容，而是对其中比较理论和抽象的概念和定理进行了比较形象和细致的阐述，算是个人经验的总结。
+
+笔记 ↓
+
+Probability Theory
+
+## Statistics
+
+这部分主要是统计学知识的复习，包含描述统计学和推论统计学。但是，为了更好地记录所学的知识，我将以下两部分的笔记内容放在了《概率论与数理统计》的框架内，以便形成更好的知识体系。
+
+本部分内容主要参考优达学城数据分析的[入门课程](https://mubu.com/doc/2nOkGMljsl)和[进阶课程](https://mubu.com/doc/3rir3GN6Ll)，浙江大学《概率论与数理统计》和茆诗松《概率论与数理统计教程》。
+
+笔记 ↓
 
 [Statistics Notes](https://github.com/agoclover/data-analysis/blob/master/statistics/Statistics%20Notes.md)
 
-#### 描述统计学
+## Econometrics
 
-1. 研究方法入门
-2. 数据可视化
-3. 集中趋势
-4. 差异性
-5. 归一化
-6. 正态分布
-7. 抽样分布
+学习完统计学并理解和掌握参数估计和假设检验等重要工具之后，有必要学习计量经济学来**练兵**。而且，这一部分和凸优化的学习，能够很好地为机器学习做铺垫。
 
-#### 推论统计学
+本部分内容以西南财经大学庞皓教授的[网课](https://www.bilibili.com/video/av16155564)为参考，以古扎拉蒂等的《计量经济学基础》第五版为参考教材。本部分内容以R语言实现，每一章结合若干案例进行分析和实现。笔记部分，由于这一章内容难度提高，本人使用xmind创建思维导图来更好地构建计量经济学框架。
 
-1. 估计
-2. 假设检验
-3. t检查
-4. 方差分析
-5. 相关性
-6. 线性回归
-7. 卡方检验
+笔记 ↓
 
-### 计量经济学
+1. [简单线性回归模型.xmind](https://github.com/agoclover/data-analysis/blob/master/statistics/2%E7%AE%80%E5%8D%95%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E6%A8%A1%E5%9E%8B.xmind)
+2. 多元线性回归模型.xmind
+3. 多重共线性.xmind
 
-以西南财经大学庞皓教授的[网课](https://www.bilibili.com/video/av16155564)为参考，以古扎拉蒂等的《计量经济学基础》第五版为参考教材。
+案例以及R语言实现 ↓
 
-本部分内容以R语言实现，具体实现过程将统一放在R语言笔记中。
+Regression Models
 
-附件为学习笔记：
 
-1. [简单线性回归模型](https://github.com/agoclover/data-analysis/blob/master/statistics/2%E7%AE%80%E5%8D%95%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E6%A8%A1%E5%9E%8B.xmind)
 
-## Python
+# Python
 
 ### Fabio Nelli
 
@@ -99,7 +107,24 @@ refer to **Python Data Analytics** written by Fabio Nelli. Notes are below:
 
 #### Project：探索数据集
 
-## SQL
+
+
+# R
+
+学习课程参考了[阿雷边学边教](https://www.bilibili.com/video/av6268508)，并自己做了大量的补充。从第六章回归分析开始都是自己总结的内容。
+
+以下为课程笔记或资料：
+
+1. [basic\_data\_management.md](https://github.com/agoclover/data-analysis/blob/master/R/notes_R_basic_data_management.md) 
+2. [ggplot2.md](https://github.com/agoclover/data-analysis/blob/master/R/notes_R_ggplot2.md) 
+3. [sample.md](https://github.com/agoclover/data-analysis/blob/master/R/notes_R_sample.md) 
+4. [normal\_distribution.md](https://github.com/agoclover/data-analysis/blob/master/R/notes_R_4_normal_distribution.md) 
+5. [parameter\_estimation\_hypothesis\_testing.md](https://github.com/agoclover/data-analysis/blob/master/R/notes_R_5_parameter_estimation_hypothesis%20_testing.md)
+6. regression_models.md
+
+
+
+# SQL
 
 通过学习MySql数据库，并使用Navicat数据库图形化软件来学习SQL。
 
@@ -110,10 +135,4 @@ refer to **Python Data Analytics** written by Fabio Nelli. Notes are below:
 1. [learning\_notes\_mysql.MD](https://github.com/agoclover/data-analysis/blob/master/sql/learning_notes_mysql.MD)
 2. [GUIDE1.xmind](https://github.com/agoclover/data-analysis/blob/master/sql/GUIDE1.xmind)
 3. [GUIDE2.xmind](https://github.com/agoclover/data-analysis/blob/master/sql/GUIDE2.xmind)
-
-## R
-
-学习课程参考了[阿雷边学边教](https://www.bilibili.com/video/av6268508)，并自己做了大量的补充。从第六章回归分析开始都是自己总结的内容。
-
-以下为课程笔记或资料： 1. [notes\_R\_basic\_data\_management.md](https://github.com/agoclover/data-analysis/blob/master/R/notes_R_basic_data_management.md) 2. [notes\_R\_ggplot2.md](https://github.com/agoclover/data-analysis/blob/master/R/notes_R_ggplot2.md) 3. [notes\_R\_sample.md](https://github.com/agoclover/data-analysis/blob/master/R/notes_R_sample.md) 4. [notes\_R\_4\_normal\_distribution.md](https://github.com/agoclover/data-analysis/blob/master/R/notes_R_4_normal_distribution.md) 5. [notes\_R\_5\_parameter\_estimation\_hypothesis\_testing](https://github.com/agoclover/data-analysis/blob/master/R/notes_R_5_parameter_estimation_hypothesis%20_testing.md)
 
