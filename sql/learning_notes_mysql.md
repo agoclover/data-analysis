@@ -1,56 +1,58 @@
-# 数据库介绍
+# learning\_notes\_mysql
 
-## 常见的数据库
+## 数据库介绍
 
-### Oracle
+### 常见的数据库
+
+#### Oracle
 
 运行稳定，可移植性高，性能超群；适用于大中型企业领域。
 
-### DB2
+#### DB2
 
 速度快，可靠性好，适用于海量数据，恢复性强。适用于大中型企业领域。
 
-### MySQL
+#### MySQL
 
 开源，体积小，速度快，适用于中小型企业领域。
 
-### SQL Server
+#### SQL Server
 
 全面，效率高，界面友好，操作容易，但是不跨平台。适用于中小型企业领域。
 
-# 专业术语
+## 专业术语
 
-### 表
+#### 表
 
 具有固定列数和任意行数
 
-### 列
+#### 列
 
 Field字段
 
-### 行
+#### 行
 
 row
 
-### 数据库
+#### 数据库
 
 关联表的集合
 
-### 主键
+#### 主键
 
 主键是唯一的，一个数据表中只能包含一个主键，你可以用主键来查询数据。
 
-### 外键
+#### 外键
 
 用于关联多个表
 
-### 索引
+#### 索引
 
 后续介绍。
 
-# MySql数据库
+## MySql数据库
 
-## 简介
+### 简介
 
 关系型数据库：所有数据都存在表里面以行列形式存储。（非关系型数据库：是以 key:value 键值对的形式进行存储。）
 
@@ -60,23 +62,23 @@ row
 
 MySQL允许于多个系统，并且支持多用语言：C C++ Python Java Perl PHP Eiffel Quby Tcl
 
-## 安装
+### 安装
 
 请参考[CDSN](https://blog.csdn.net/skykingf/article/details/87090739).
 
-# 常用数据库命令
+## 常用数据库命令
 
-# NaviCat可视化工具安装
+## NaviCat可视化工具安装
 
-https://www.waitsun.com/navicat-premium.html
+[https://www.waitsun.com/navicat-premium.html](https://www.waitsun.com/navicat-premium.html)
 
-# 笔记
+## 笔记
 
-## DQL
+### DQL
 
-### 条件查询
+#### 条件查询
 
-```mysql
+```text
 # 条件查询
 
 # 性别为男，年龄为20
@@ -102,9 +104,9 @@ select * from student where stu_gender != '男';
 select * from student where stu_age is not null;
 ```
 
-### 模糊查询
+#### 模糊查询
 
-```mysql
+```text
 # 模糊查询
 
 # 查询姓名由5个字母构成的学生记录
@@ -123,11 +125,9 @@ select * from student where stu_name like '_u%';
 select * from student where stu_name like '%s%';
 ```
 
+#### 字段控制查询
 
-
-### 字段控制查询
-
-```mysql
+```text
 # 字段控制
 
 # 去除重复记录
@@ -143,22 +143,18 @@ select *, ifnull(stu_age, 0) + ifnull(stu_score, 0) from student;
 select *, ifnull(stu_age, 0) + ifnull(stu_score, 0) as total from student;
 ```
 
+#### 排序
 
-
-### 排序
-
-```mysql
+```text
 # 排序
 
 # 对所有员工的薪水进行排序
 SELECT * FROM employee ORDER BY salary DESC, id DESC;
 ```
 
+#### 聚合函数
 
-
-### 聚合函数
-
-```mysql
+```text
 # COUNT()：统计指定列不为NULL的记录行数
 
 # 查询employee表中记录数：
@@ -187,9 +183,9 @@ SELECT AVG(salary) as avg, MAX(salary) as mac, MIN(salary) as min
 FROM employee;
 ```
 
-### GROUP BY
+#### GROUP BY
 
-```mysql
+```text
 # GROUP BY, GOUP_CONCAT()
 
 # 当group by单独使用时，只显示出每组的第一条记录；
@@ -240,23 +236,23 @@ having SUM(salary) > 6000
 ORDER BY SUM(salary) DESC;
 ```
 
-### 书写顺序
+#### 书写顺序
 
-```mysql
+```text
 # 书写顺序
 # SELECT FROM WHERE GROUP BY HAVING ORDER BY LIMIT
 ```
 
-### 执行顺序
+#### 执行顺序
 
-```mysql
+```text
 # 执行顺序
 # FROM WHERE GROUP BY HAVING SELECT ORDER BY LIMIT
 ```
 
-### LIMIT
+#### LIMIT
 
-```mysql
+```text
 # LIMIT
 SELECT * FROM employee WHERE salary > 1000 LIMIT 3, 2;
 
@@ -265,14 +261,11 @@ int curPage = 1;
 int papeSize = 3;
 
 SELECT * FROM employee LIMIT (curPage - 1) * pageSize, pageSize;
-
 ```
 
+### 数据完整性
 
-
-## 数据完整性
-
-```mysql
+```text
 # 实体完整性
 
 # 主键
@@ -344,11 +337,9 @@ ALTER TABLE `score` ADD CONSTRAINT `sc_st_fk`
 FOREIGN KEY(`stu_id`) REFERENCES `student`(`id`);
 ```
 
+### 表之间的关系
 
-
-## 表之间的关系
-
-```mysql
+```text
 # 一对多的关系
 CREATE TABLE `person`(
 `id` INT PRIMARY KEY,
@@ -372,7 +363,7 @@ CREATE TABLE `teacher` (
 
 # 创建学生表
 CREATE TABLE `student` (
-`sid` INT PRIMARY KEY auto_increment,	
+`sid` INT PRIMARY KEY auto_increment,    
 `name` VARCHAR(20),
 `gender` VARCHAR(1) DEFAULT '男');
 
@@ -390,11 +381,9 @@ ADD CONSTRAINT `fk_tid` FOREIGN KEY(`tid`) REFERENCES `teacher` (`tid`);
 # 避免大量冗余数据的出现
 ```
 
+### 多表查询
 
-
-## 多表查询
-
-```mysql
+```text
 # 多表查询
 
 # 合并结果集
@@ -563,11 +552,9 @@ WHERE e1.mgr = e2.empno
 AND e1.empno = 7369;
 ```
 
+### 存储过程
 
-
-## 存储过程
-
-```mysql
+```text
 # 创建存储过程
 delimiter $$
 CREATE PROCEDURE show_emp()
@@ -650,9 +637,9 @@ CALL get_sum(@a, 10);
 SELECT @a;
 ```
 
-### 创建一个插入随机字符的存储过程
+#### 创建一个插入随机字符的存储过程
 
-```mysql
+```text
 delimiter $$
 CREATE PROCEDURE insert_employee(IN startNum INT, IN max_num INT)
 BEGIN
@@ -661,20 +648,18 @@ DECLARE i INT DEFAULT 0;
 -- 默认情况是自动提交sql
 SET autocommit = 0; -- 不让它自动提交sql
 REPEAT
-	SET i = i + 1;
-	-- 插入数据
-	INSERT INTO employee VALUES(startNum + i, rand_str(5), FLOOR(10 + rand() * 30));
+    SET i = i + 1;
+    -- 插入数据
+    INSERT INTO employee VALUES(startNum + i, rand_str(5), FLOOR(10 + rand() * 30));
 UNTIL i = max_num END REPEAT;
 COMMIT; -- 整体提交所有sql，提高效率
 END$$
 delimiter ;
 ```
 
+### 自定义函数
 
-
-## 自定义函数
-
-```mysql
+```text
 # 自定义函数
 # 随机生成字符串
 
@@ -697,7 +682,7 @@ delimiter ;
 SELECT rand_str(10);
 ```
 
-#### Mysql自定义函数报错（1418）解决方法原因：
+**Mysql自定义函数报错（1418）解决方法原因：**
 
 出错信息：
 
@@ -715,7 +700,8 @@ SELECT rand_str(10);
 
 在MySQL中创建函数时出现这种错误的解决方法：
 
-```mysql
+```text
 set global log_bin_trust_function_creators = TRUE;
 set global log_bin_trust_function_creators = 1;
 ```
+

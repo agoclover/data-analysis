@@ -1,6 +1,8 @@
-# 安装与基础
+# notes\_R\_basic\_data\_management
 
-```R
+## 安装与基础
+
+```r
 # 安装包
 install.packages("ggplot2")
 # 加载包
@@ -55,9 +57,9 @@ for(i in 1:10)
   print("hi")
 ```
 
-# R 数据结构
+## R 数据结构
 
-## 数据类型
+### 数据类型
 
 1. 向量 vector
 2. 矩阵 matrix
@@ -65,17 +67,17 @@ for(i in 1:10)
 4. 数据框 dataframe
 5. 列表 list
 
-## 向量 vector
+### 向量 vector
 
-### 向量
+#### 向量
 
 用于存储数值型、字符型或逻辑型的一堆数组。
 
 单个向量中必须是相同的数据类型。
 
-### 向量生成
+#### 向量生成
 
-```R
+```r
 a <- c(1, 2, 3, 4, 5)
 b <- c(6 : 10)
 c <- c("red", "blue", "green")
@@ -83,9 +85,9 @@ d <- c(TRUE, FALSE, FALSE, TRUE)
 # c是combine的意思
 ```
 
-### 访问向量
+#### 访问向量
 
-```R
+```r
 # 访问某个值
 # 默认首位是1，这点和python不同
 a[n]
@@ -93,15 +95,15 @@ a[n]
 a[c(1, 4)]
 ```
 
-## 矩阵 matrix
+### 矩阵 matrix
 
-### 矩阵
+#### 矩阵
 
 二维数据集，且其中每个元素都是相同的数据类型。
 
-### 矩阵生成
+#### 矩阵生成
 
-```R
+```r
 > n1 <- c("a", "b", "c", "d", "e")
 > n2 <- c("A", "B", "C", "D")
 > m1 <- matrix(1:20, nrow=5, ncol=4, byrow=TRUE, dimnames = list(n1, n2))
@@ -114,26 +116,26 @@ d 13 14 15 16
 e 17 18 19 20
 ```
 
-### 访问矩阵中的元素
+#### 访问矩阵中的元素
 
-```R
+```r
 m1[2, 4] # 访问第2行第4列的元素
 m1[2, c(2, 3)] # 访问第2行第2列和第3列的元素
 m1[3,] # 访问第3行的所有元素
 M1[, 4] # 访问第4列的所有元素
 ```
 
-## 数组 array
+### 数组 array
 
-### 数组
+#### 数组
 
-数组与矩阵类似，但是维度可以>2
+数组与矩阵类似，但是维度可以&gt;2
 
-### 数组生成
+#### 数组生成
 
 这里定义一个3维数组：
 
-```R
+```r
 > n1 <- c("a", "b")
 > n2 <- c("c1", "c2", "c3")
 > n3 <- c("z1", "z2", "z3", "z4")
@@ -164,28 +166,28 @@ a 19 21 23
 b 20 22 24
 ```
 
-### 数据访问
+#### 数据访问
 
 访问第2行第3列，在第1个矩阵中的元素：
 
-```R
+```r
 > array1[2, 3, 1]
 [1] 6
 ```
 
-## 数据框 dataframe
+### 数据框 dataframe
 
-### 数据框
+#### 数据框
 
 由不同的列组成，不同列可以是不同的数据类型。
 
 这些和python中的DataFrame类似。
 
-### 生成 dataframe
+#### 生成 dataframe
 
 由向量作为各列生成：
 
-```R
+```r
 > age <- c(22, 23, 35, 44)
 > gender <- c("female", "male", "male", "female")
 > grade <- c(80, 90, 96, 77)
@@ -200,7 +202,7 @@ b 20 22 24
 
 比较自由的生成形式，比如固定值、数列、抽样等：
 
-```R
+```r
 # 生成字母
 > L3 <- LETTERS[1:3]
 > L3
@@ -228,13 +230,11 @@ b 20 22 24
 [1] TRUE
 ```
 
-
-
-### 访问 dataframe
+#### 访问 dataframe
 
 通过下标访问：
 
-```R
+```r
 > df1[1,]
   age gender grade
 1  22 female    80
@@ -265,7 +265,7 @@ Levels: female male
 
 通过索引访问：
 
-```R
+```r
 > df1["age"]
   age
 1  22
@@ -282,20 +282,20 @@ Levels: female male
 
 通过`$`符号:
 
-```R
+```r
 > df1$age
 [1] 22 23 35 44
 ```
 
-## 列表 list
+### 列表 list
 
-### 列表
+#### 列表
 
 列表就是一些对象的有序集合，这些集合可能是向量、矩阵、数组、数据框和其他列表的组合。
 
-### 列表生成
+#### 列表生成
 
-```R
+```r
 > v1 <- c(1, 2, 3, 4)
 > m1 <- matrix(1:20, 4)
 > m1
@@ -326,57 +326,57 @@ $df
 3  23      UK
 ```
 
-### 访问元素
+#### 访问元素
 
 通过下标访问：
 
-```R
+```r
 > list1[[2]][2, 3]
 [1] 10
 ```
 
 通过`$`访问：
 
-```R
+```r
 > list1$v
 [1] 1 2 3 4
 ```
 
-## 区别
+### 区别
 
-|          | vector | matrix | array     | dataframe    | List     |
-| -------- | ------ | ------ | --------- | ------------ | -------- |
-| 维数     | 一维   | 二维   | 可以>二维 | 二维         | 对象集合 |
-| 数据类型 |        | 相同   |           | 各列数据类型 |          |
+|  | vector | matrix | array | dataframe | List |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| 维数 | 一维 | 二维 | 可以&gt;二维 | 二维 | 对象集合 |
+| 数据类型 |  | 相同 |  | 各列数据类型 |  |
 
-# I/O
+## I/O
 
-## function related
+### function related
 
-| Function              | Info                           |
-| --------------------- | ------------------------------ |
-| getwd()               | 得到当前文件存放的工作目录     |
-| setwd()               | 重新设置当前文件存放的工作目录 |
-| read.csv(path)        | 导入数据文件                   |
-| write.csv(data, name) | 导出数据文件                   |
+| Function | Info |
+| :--- | :--- |
+| getwd\(\) | 得到当前文件存放的工作目录 |
+| setwd\(\) | 重新设置当前文件存放的工作目录 |
+| read.csv\(path\) | 导入数据文件 |
+| write.csv\(data, name\) | 导出数据文件 |
 
-## 导入`.csv`文件或 Excel 文件
+### 导入`.csv`文件或 Excel 文件
 
 1. 通过`setwd()`重置工作目录；
-2. 将Excel文件另存为`.csv`文件(或有本身`.csv`文件)；
+2. 将Excel文件另存为`.csv`文件\(或有本身`.csv`文件\)；
 3. `data_titanic = read.csv("titanic_data.csv")`。
 
-## 导出数据流程
+### 导出数据流程
 
 1. 通过`setwd()`重置工作目录；
 2. 输入`write.csv(data, name)`;
 3. 不导出索引`write.csv(data, name, row.names = FALSE)`。
 
-# dataframe 常用操作函数
+## dataframe 常用操作函数
 
-## 简化数据框的批量操作
+### 简化数据框的批量操作
 
-```R
+```r
 attach(dataframe) # 绑定数据框
 操作1
 操作2
@@ -391,7 +391,7 @@ with(dataframe, {
 
 绑定示例，调用`mtcars`数据集：
 
-```R
+```r
 > df1 <- head(mtcars)
 > df1
                    mpg cyl disp  hp drat    wt  qsec vs am gear carb
@@ -424,9 +424,9 @@ The following object is masked from package:ggplot2:
 [1] 187.0 187.0 134.8 285.4 386.7 249.1
 ```
 
-## 增加dataframe的变量(列)
+### 增加dataframe的变量\(列\)
 
-```R
+```r
 # within()
 within(dataframe, {
   操作1
@@ -443,7 +443,7 @@ mutate(dataframe, 操作1, ...操作n)
 
 示例，调用`mtcars`数据集：
 
-```R
+```r
 # within() 法
 > df1
                    mpg cyl disp  hp drat    wt  qsec vs am gear carb
@@ -490,7 +490,7 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1 249.1  83.0
 
 `within()`是双参数，后面各操作合为一个参数，`transform()`和`mutate()`是多参数输入。对于后两种实现方式，`mutate()`可以调用已前面输入的参数而`transform()`不可以，当然`within()`也是可以的，比如以下操作：
 
-```R
+```r
 > mutate(df1, sum=mpg+cyl+disp, mean=(mpg + cyl + disp) / 3, x=sum+mean)
    mpg cyl disp  hp drat    wt  qsec vs am gear carb   sum      mean        x
 1 21.0   6  160 110 3.90 2.620 16.46  0  1    4    4 187.0  62.33333 249.3333
@@ -501,15 +501,15 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1 249.1  83.0
 6 18.1   6  225 105 2.76 3.460 20.22  1  0    3    1 249.1  83.03333 332.1333
 ```
 
-# 排序和选取子集(条件筛选)
+## 排序和选取子集\(条件筛选\)
 
-## 排序
+### 排序
 
-### `order()`
+#### `order()`
 
 R自带的排序函数。仍然以`mtcars`这个数据集为例：
 
-```R
+```r
 # 仅排序，注意这里是得到下标的排序
 > order(mtcars$mpg, decreasing = TRUE)
  [1] 20 18 19 28 26 27  8  3  9 21  4 32  1  2 30 10 25  5  6 11 13 12 29 22 14 23 31 17  7
@@ -555,23 +555,21 @@ Lincoln Continental 10.4   8 460.0 215 3.00 5.424 17.82  0  0    3    4
 mtcars[order(mtcars$mpg, mtcars$cyl),]
 ```
 
-
-
-### `dplyr`包中的`arrange()`
+#### `dplyr`包中的`arrange()`
 
 `arrange()`函数比较方便，降序直接在变量前加"-"，但是排序后丢失了索引。
 
-```R
+```r
 arrange(mtcars, -mpg, vs)
 ```
 
-## 选取子集(条件筛选)
+### 选取子集\(条件筛选\)
 
-### `subset()`函数
+#### `subset()`函数
 
 筛选出`mpg >= 20 & vs == 0`的数据：
 
-```R
+```r
 > subset(mtcars, mpg >= 20 & vs == 0)
               mpg cyl  disp  hp drat    wt  qsec vs am gear carb
 Mazda RX4      21   6 160.0 110 3.90 2.620 16.46  0  1    4    4
@@ -585,25 +583,25 @@ Mazda RX4 Wag  21
 Porsche 914-2  26
 ```
 
-### dplyr包中的filter()函数
+#### dplyr包中的filter\(\)函数
 
 这个函数每次返回全部列
 
-```R
+```r
 filter(mtcars, mpg >= 20 | vs ==0)
 ```
 
-# 重命名列和组合数据
+## 重命名列和组合数据
 
-## 重命名
+### 重命名
 
-### names()
+#### names\(\)
 
 将`data`这个dataframe的第1列的列名重命名为"mmm"，这是在data上操作的：
 
 `names(data)[1] <- "mmm"`
 
-### reshape包中的rename()
+#### reshape包中的rename\(\)
 
 `rename()`这个函数是返回一个新的dataframe，语法如下:
 
@@ -613,13 +611,13 @@ filter(mtcars, mpg >= 20 | vs ==0)
 
 `data <- rename(data, c(mpg="newmpg", hp="newhp"))`
 
-## 组合数据
+### 组合数据
 
-###paste() 拼接函数
+#### paste\(\) 拼接函数
 
 Concatenate vectors after converting to character.
 
-```R
+```r
 # 示例1
 > v1 <- c(10, 20, 30)
 > v2 <- "g"
@@ -637,11 +635,9 @@ Concatenate vectors after converting to character.
 [12] "12 th
 ```
 
+#### rbind\(\) 行合并 、cbind\(\) 列合并
 
-
-### rbind() 行合并 、cbind() 列合并
-
-```R
+```r
 # rbind()
 > df1 <- mtcars[1:10,] # 选取1~10行
 > df2 <- mtcars[11:20,] # 选取11~20行
@@ -653,13 +649,11 @@ Concatenate vectors after converting to character.
 > df <- cbind(df1, df2)
 ```
 
-
-
-### merge(): inner/left/right join
+#### merge\(\): inner/left/right join
 
 即匹配，相当于vlookup或SQL中的查询或连接。
 
-```R
+```r
 # 先创建两个dataframe
 > df1 <- data.frame(id1 = c(101, 102, 104, 106, 107),
 +            gender = c("男", "女", "男", "女", "男"))
@@ -736,38 +730,38 @@ Concatenate vectors after converting to character.
 9 110   <NA>  2016/4/6   6000
 ```
 
-# apply家族函数
+## apply家族函数
 
-## apply()函数
+### apply\(\)函数
 
-### 作用
+#### 作用
 
 一般有类似python的map和reduce两种方式。
 
 map即函数作用与每一个元素，reduce即按照行或列来代入聚合函数。
 
-### 语法
+#### 语法
 
 `apply(X, MARGIN, FUN, ...)`
 
 arguements：
 
-| arguement | meaning                                                      |
-| --------- | ------------------------------------------------------------ |
-| `X`       | an array, including a matrix.                                |
-| `MARGIN`  | a vector giving the subscripts which the function will be applied over. E.g., for a matrix `1` indicates rows, `2` indicates columns, `c(1, 2)`indicates rows and columns. Where `X` has named dimnames, it can be a character vector selecting dimension names. |
-| `FUN`     | the function to be applied: see ‘Details’. In the case of functions like `+`, `%*%`, etc., the function name must be backquoted or quoted. |
-| `...`     | optional arguments to `FUN`.                                 |
+| arguement | meaning |
+| :--- | :--- |
+| `X` | an array, including a matrix. |
+| `MARGIN` | a vector giving the subscripts which the function will be applied over. E.g., for a matrix `1` indicates rows, `2` indicates columns, `c(1, 2)`indicates rows and columns. Where `X` has named dimnames, it can be a character vector selecting dimension names. |
+| `FUN` | the function to be applied: see ‘Details’. In the case of functions like `+`, `%*%`, etc., the function name must be backquoted or quoted. |
+| `...` | optional arguments to `FUN`. |
 
-### 特点
+#### 特点
 
-矩阵or数组 -> `apply()`  -> **矩阵或向量**
+矩阵or数组 -&gt; `apply()` -&gt; **矩阵或向量**
 
-### 实例
+#### 实例
 
-#### 对矩阵matrix使用apply()
+**对矩阵matrix使用apply\(\)**
 
-```R
+```r
 > m1 <- matrix(1:20, nrow=4)
 > m1
      [,1] [,2] [,3] [,4] [,5]
@@ -802,14 +796,14 @@ arguements：
 
 这里map虽然是作用于每一个元素，但是由于顺序不一样结果也不一样：
 
-- MARGIN = 1时按照行，原dataframe每一行是5个，作用一行得到一个向量结果作为1列，最终有4列；
-- MARGIN = 2时按照列，原dataframe每一列是4个，作用一列得到一个向量结果作为1列，最终有5列；
+* MARGIN = 1时按照行，原dataframe每一行是5个，作用一行得到一个向量结果作为1列，最终有4列；
+* MARGIN = 2时按照列，原dataframe每一列是4个，作用一列得到一个向量结果作为1列，最终有5列；
 
-也就是说，无论是按照行还是按照列，每作用一行(列)得到的结果默认作为1列。
+也就是说，无论是按照行还是按照列，每作用一行\(列\)得到的结果默认作为1列。
 
-#### 对数组array使用apply()
+**对数组array使用apply\(\)**
 
-```R
+```r
 # 定义数组
 > xname <- c("x1", "x2")
 > yname <- c("y1", "y2", "y3")
@@ -852,20 +846,20 @@ x2 20 22 24
 # 求每个矩阵的和
 > apply(a1, MARGIN = 3, sum)
  z1  z2  z3  z4 
- 21  57  93 129 
+ 21  57  93 129
 ```
 
-#### 对dataframe有时也可以用apply()
+**对dataframe有时也可以用apply\(\)**
 
-若dataframe各列均为数值型，则apply()会自动将dataframe转化为matrix；存在非数值型数据，使用时将出错。
+若dataframe各列均为数值型，则apply\(\)会自动将dataframe转化为matrix；存在非数值型数据，使用时将出错。
 
-## lapply()函数
+### lapply\(\)函数
 
-### 作用
+#### 作用
 
 对list中的各个元素使用函数。
 
-### 语法
+#### 语法
 
 `lapply(x, FUN, ...)`
 
@@ -873,13 +867,13 @@ x : 格式为列表的数据源
 
 FUN : 函数，可以是系统自带的函数，也可以是自定义函数。
 
-### 特点
+#### 特点
 
-list -> `lapply()` -> **list**
+list -&gt; `lapply()` -&gt; **list**
 
-### 实例
+#### 实例
 
-```R
+```r
 > l1 <- list(v <- 1:10, m <- matrix(1:20, 4))
 > lapply(l1, sum)
 [[1]]
@@ -889,13 +883,13 @@ list -> `lapply()` -> **list**
 [1] 210
 ```
 
-## sapply()函数
+### sapply\(\)函数
 
-### 作用
+#### 作用
 
 对list中的各个元素使用函数。
 
-### 语法
+#### 语法
 
 `sapply(x, FUN, ...)`
 
@@ -903,31 +897,31 @@ x : 格式为列表的数据源
 
 FUN : 函数，可以是系统自带的函数，也可以是自定义函数。
 
-### 特点
+#### 特点
 
-list -> `lapply()` -> **vector**
+list -&gt; `lapply()` -&gt; **vector**
 
 `apply()`输出结果是vector或matrix，`lapply()`输出结果是list，`sapply()`输出结果是vector。
 
-### 实例
+#### 实例
 
-```R
+```r
 > l1 <- list(v <- 1:10, m <- matrix(1:20, 4))
 > sapply(l1, sum)
 [1]  55 210
 ```
 
-## tapply()函数
+### tapply\(\)函数
 
-tapply()函数在分组数据处理中详述。
+tapply\(\)函数在分组数据处理中详述。
 
-# 分组数据处理
+## 分组数据处理
 
 相当于SQL中的`GROUP BY`。
 
 先创建练习用的dataframe：
 
-```R
+```r
 > df <- data.frame(age = sample.int(10, 9, replace = TRUE) + 30,
 +                  sex = sample(c("female", "male"), 9, replace = TRUE),
 +                  education = sample(c("高中", "大专", "大学", "硕士"), 9, replace = TRUE),
@@ -945,19 +939,17 @@ tapply()函数在分组数据处理中详述。
 9  38   male      大专   5601
 ```
 
-
-
-## tapply()
+### tapply\(\)
 
 `tapply(X, INDEX, FUN = NULL)`
 
-| arguement | meaning                                                      |
-| --------- | ------------------------------------------------------------ |
-| `X`       | an **R** object for which a `split` method exists. Typically vector-like, allowing subsetting with `[`.  即要计算的变量 |
-| `INDEX`   | a `list` of one or more `factor`s, each of same length as `X`. The elements are coerced to factors by `as.factor`.  分组变量 |
-| `FUN`     | a function (or name of a function) to be applied, or `NULL`. In the case of functions like `+`, `%*%`, etc., the function name must be backquoted or quoted. If `FUN` is `NULL`, tapply returns a vector which can be used to subscript the multi-way array `tapply`normally produces. |
+| arguement | meaning |
+| :--- | :--- |
+| `X` | an **R** object for which a `split` method exists. Typically vector-like, allowing subsetting with `[`.  即要计算的变量 |
+| `INDEX` | a `list` of one or more `factor`s, each of same length as `X`. The elements are coerced to factors by `as.factor`.  分组变量 |
+| `FUN` | a function \(or name of a function\) to be applied, or `NULL`. In the case of functions like `+`, `%*%`, etc., the function name must be backquoted or quoted. If `FUN` is `NULL`, tapply returns a vector which can be used to subscript the multi-way array `tapply`normally produces. |
 
-```R
+```r
 # 一维汇总
 > tapply(df$income, df$education, mean)
    大学    大专    高中    硕士 
@@ -972,30 +964,28 @@ tapply()函数在分组数据处理中详述。
 硕士 5547.0     NA
 ```
 
-
-
-## by()
+### by\(\)
 
 `by(data, INDICES, FUN)`
 
-| arguement | meaning                                                      |
-| --------- | ------------------------------------------------------------ |
-| `data`    | an **R** object, normally a data frame, possibly a matrix.   |
-| `INDICES` | a factor or a list of factors, each of length `nrow(data)`.  |
-| `FUN`     | a function to be applied to (usually data-frame) subsets of `data`. |
+| arguement | meaning |
+| :--- | :--- |
+| `data` | an **R** object, normally a data frame, possibly a matrix. |
+| `INDICES` | a factor or a list of factors, each of length `nrow(data)`. |
+| `FUN` | a function to be applied to \(usually data-frame\) subsets of `data`. |
 
-```R
+```r
 > by(df$income, df$education, mean)
 > by(df$income, list(df$education,df$sex), mean)
 ```
 
 这里仅输出的格式不一样。
 
-## aggregate()
+### aggregate\(\)
 
 `aggregate(x~c1+c2, data, FUN)`：x为待求变量，c1、c2…为分组变量，间接好用。
 
-```R
+```r
 > aggregate(income ~ sex, df, sum)
      sex income
 1 female  22359
@@ -1009,24 +999,24 @@ tapply()函数在分组数据处理中详述。
 5 female      硕士  11094
 ```
 
-# 缺失值处理
+## 缺失值处理
 
-## 缺失值 NA
+### 缺失值 NA
 
-- 数据源中缺少的数据；
-- 由于记录错误产生了一些不符合常理的值，也需要将其定义为缺失值；
-- 符号为`NA`。
+* 数据源中缺少的数据；
+* 由于记录错误产生了一些不符合常理的值，也需要将其定义为缺失值；
+* 符号为`NA`。
 
-## 处理缺失值方法
+### 处理缺失值方法
 
-- 判别：`is.na()`
-- 将`df`的`column`列的值为`value`的数据为`NA`：`df$column[df$column ==  value] <- NA`
-- 将`df`中的所有缺失值替换为`value`：`df[is.na(df)] <- value`
-- 排除缺失值：
+* 判别：`is.na()`
+* 将`df`的`column`列的值为`value`的数据为`NA`：`df$column[df$column ==  value] <- NA`
+* 将`df`中的所有缺失值替换为`value`：`df[is.na(df)] <- value`
+* 排除缺失值：
   1. 有些函数自带的 `na.rm = TRUE` 选项，比如`mean`，`sum`函数；
   2. `na.omit()`可以将含有缺失值的那一整行都移除掉，此函数请慎用。
 
-```R
+```r
 # 判别缺失值
 > ID <- paste("A", "00", 1:5, sep = "")
 > age <- c(24, NA, 35, 19, -20)
@@ -1073,13 +1063,14 @@ tapply()函数在分组数据处理中详述。
 5 A005 -20
 ```
 
-# 数据类型转换函数
+## 数据类型转换函数
 
-| 判断            |        | 转换            |
-| --------------- | ------ | --------------- |
-| is.numeric()    | 数值   | as.numeric()    |
-| is.character()  | 字符   | as.character()  |
-| Is.factor()     | 因子   | as.factor()     |
-| is.vector()     | 向量   | as.vector()     |
-| is.matrix()     | 矩阵   | as.matrix()     |
-| is.data.frame() | 数据框 | as.data.frame() |
+| 判断 |  | 转换 |
+| :--- | :--- | :--- |
+| is.numeric\(\) | 数值 | as.numeric\(\) |
+| is.character\(\) | 字符 | as.character\(\) |
+| Is.factor\(\) | 因子 | as.factor\(\) |
+| is.vector\(\) | 向量 | as.vector\(\) |
+| is.matrix\(\) | 矩阵 | as.matrix\(\) |
+| is.data.frame\(\) | 数据框 | as.data.frame\(\) |
+

@@ -1,15 +1,16 @@
-# set.seed()
+# notes\_R\_sample
 
-> 本小段引用自[CSDN](https://blog.csdn.net/vencent_cy/article/details/50350020 )。
->
+## set.seed\(\)
+
+> 本小段引用自[CSDN](https://blog.csdn.net/vencent_cy/article/details/50350020%20)。
 
 `set.seed()` is the recommended way to specify seeds.
 
-`set.seed()`用于设定随机数种子，一个特定的种子可以产生一个特定的伪随机序列，这个函数的主要目的，是让你的模拟能够可重复出现，因为很多时候我们需要取随机数，但这段代码再跑一次的时候，结果就不一样了，如果需要重复出现同样的模拟结果的话，就可以用`set.seed()`。在调试程序或者做展示的时候，结果的可重复性是很重要的，所以随机数种子也就很有必要。 
+`set.seed()`用于设定随机数种子，一个特定的种子可以产生一个特定的伪随机序列，这个函数的主要目的，是让你的模拟能够可重复出现，因为很多时候我们需要取随机数，但这段代码再跑一次的时候，结果就不一样了，如果需要重复出现同样的模拟结果的话，就可以用`set.seed()`。在调试程序或者做展示的时候，结果的可重复性是很重要的，所以随机数种子也就很有必要。
 
-也可以简单地理解为括号里的数只是一个编号而已，例如`set.seed(100)`不应将括号里的数字理解成“100”，而是应该理解成“编号为一零零的随机数发生”，下一次再模拟可以采用二零零（200）或者（111）等不同的编号即可，编号设定基本可以随意。 
+也可以简单地理解为括号里的数只是一个编号而已，例如`set.seed(100)`不应将括号里的数字理解成“100”，而是应该理解成“编号为一零零的随机数发生”，下一次再模拟可以采用二零零（200）或者（111）等不同的编号即可，编号设定基本可以随意。
 
-```R
+```r
 # 随机生成10个随机数 
 > x <- rnorm(10)
 > x 
@@ -38,15 +39,13 @@
 [1] TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE
 ```
 
-
-
-# rep()
+## rep\(\)
 
 `rep(x, each, time, length)`
 
 用以重复元素（数字、字符串等）举例：
 
-```R
+```r
 # 每个元素依次重复2次
 > rep(1:4, each=2)
 [1] 1 1 2 2 3 3 4 4
@@ -61,13 +60,11 @@
  [1] 1 2 3 4 1 2 3 4 1 2 3 4 1 2 3
 ```
 
-
-
-# sample()
+## sample\(\)
 
 `sample(x, size, replace = FALSE, prob = NULL)`
 
-```R
+```r
 # sample()来1~100随机抽样
 sample(100, 10, replace = TRUE)
 # 某几个值抽样
@@ -80,7 +77,7 @@ sample.int(100, 10, replace = TRUE)
 
 若`size`缺省，则`size`等于总体个数：
 
-```R
+```r
 > set.seed(1)
 > sample <- sample(1:10^6, replace = TRUE)
 > p <- 1 - sum(unique(sample) %in% 1:10^6) / 10^6
@@ -88,13 +85,11 @@ sample.int(100, 10, replace = TRUE)
 [1] 2.71666
 ```
 
+## 随机抽样
 
+### 1 导入数据
 
-# 随机抽样
-
-## 1 导入数据
-
-```R
+```r
 getwd()
 setwd("/Users/amos/Library/CloudStorage/iCloud Drive/Desktop/data_analysis/R/datafiles")
 df <- read.csv("titanic_data.csv")
@@ -102,58 +97,56 @@ df <- subset(df, select = -c(Name, Ticket)) # 去除无用的Name和Ticket列
 df <- df[order(df$PassengerId),] # 以PassengerID对数据进行排序
 ```
 
-## 2 对数据集的序号进行抽样
+### 2 对数据集的序号进行抽样
 
-```R
+```r
 index <- sample(1:nrow(df), 60, replace = FALSE)
 ```
 
-##3 根据抽样得到的序号来提取数据
+### 3 根据抽样得到的序号来提取数据
 
-```R
+```r
 sample_df <- df[index, ]
 ```
 
-
-
-# 分层抽样
+## 分层抽样
 
 `sampling`包中的函数，用于分层抽样。
 
-## 函数
+### 函数
 
 `strata(data, stratanames=NULL, size, method=c("srswor","srswr","poisson","systematic"), pik,description=FALSE)`
 
-## 参数
+### 参数
 
-| Arguements    | Meaning                                                      |
-| ------------- | ------------------------------------------------------------ |
-| `data`        | data frame or data matrix; its number of rows is N, the population size. <br />dataframe或矩阵；行数(总体容量)=N。 |
-| `stratanames` | vector of stratification variables. <br />分层变量的向量。   |
-| `size`        | vector of stratum sample sizes (in the order in which the strata are given in the input data set). <br />分层样本容量的向量。 |
-| `method`      | method to select units; the following methods are implemented: simple random sampling without replacement (srswor), simple random sampling with replacement (srswr), Poisson sampling (poisson), systematic sampling (systematic); if "method" is missing, the default method is "srswor". <br />选择单位的方法; 实现了以下方法：无替换的简单随机抽样（srswor），带替换的简单随机抽样（srswr），泊松抽样（poisson），系统抽样（systematic）; 如果缺少`method`，则默认方法为`srswor`。 |
-| `pik`         | vector of inclusion probabilities or auxiliary information used to compute them; this argument is only used for unequal probability sampling (Poisson and systematic). If an auxiliary information is provided, the function uses the [inclusionprobabilities](http://127.0.0.1:15926/help/library/sampling/help/inclusionprobabilities) function for computing these probabilities.<br />包含概率的向量或用于计算它们的辅助信息; 该参数仅用于不等概率抽样（泊松和系统）。 如果提供了辅助信息，则该函数使用[inclusionprobabilities](http://127.0.0.1:15926/help/library/sampling/help/inclusionprobabilities)函数来计算这些概率。 |
-| `description` | a message is printed if its value is TRUE; the message gives the number of selected units and the number of the units in the population. By default, the value is FALSE.<br />如果消息的值为TRUE，则打印该消息; 该消息给出了所选单位的数量和总体中的单位数。 默认情况下，该值为FALSE。 |
+| Arguements | Meaning |
+| :--- | :--- |
+| `data` | data frame or data matrix; its number of rows is N, the population size.  dataframe或矩阵；行数\(总体容量\)=N。 |
+| `stratanames` | vector of stratification variables.  分层变量的向量。 |
+| `size` | vector of stratum sample sizes \(in the order in which the strata are given in the input data set\).  分层样本容量的向量。 |
+| `method` | method to select units; the following methods are implemented: simple random sampling without replacement \(srswor\), simple random sampling with replacement \(srswr\), Poisson sampling \(poisson\), systematic sampling \(systematic\); if "method" is missing, the default method is "srswor".  选择单位的方法; 实现了以下方法：无替换的简单随机抽样（srswor），带替换的简单随机抽样（srswr），泊松抽样（poisson），系统抽样（systematic）; 如果缺少`method`，则默认方法为`srswor`。 |
+| `pik` | vector of inclusion probabilities or auxiliary information used to compute them; this argument is only used for unequal probability sampling \(Poisson and systematic\). If an auxiliary information is provided, the function uses the [inclusionprobabilities](http://127.0.0.1:15926/help/library/sampling/help/inclusionprobabilities) function for computing these probabilities. 包含概率的向量或用于计算它们的辅助信息; 该参数仅用于不等概率抽样（泊松和系统）。 如果提供了辅助信息，则该函数使用[inclusionprobabilities](http://127.0.0.1:15926/help/library/sampling/help/inclusionprobabilities)函数来计算这些概率。 |
+| `description` | a message is printed if its value is TRUE; the message gives the number of selected units and the number of the units in the population. By default, the value is FALSE. 如果消息的值为TRUE，则打印该消息; 该消息给出了所选单位的数量和总体中的单位数。 默认情况下，该值为FALSE。 |
 
-## 细节
+### 细节
 
 在应用函数之前，应按stratanames参数中给出的列按升序对数据进行排序。 例如，使用数据`[order(data$state，data$region), ]`。
 
-## 值
+### 值
 
 该函数生成一个对象，其中包含以下信息：
 
-| 内容    | 解释             |
-| ------- | ---------------- |
-| ID_unit | 所选单位的标识符 |
-| 分层    | 单位层级         |
-| 概率    | 单位包含的概率   |
+| 内容 | 解释 |
+| :--- | :--- |
+| ID\_unit | 所选单位的标识符 |
+| 分层 | 单位层级 |
+| 概率 | 单位包含的概率 |
 
-## 举例
+### 举例
 
-### 例1
+#### 例1
 
-```R
+```r
 # Example from An and Watts (New SAS procedures for Analysis of Sample Survey Data)
 # generates artificial data (a 235X3 matrix with 3 columns: state, region, income).
 # the variable "state" has 2 categories ('nc' and 'sc'). 
@@ -182,9 +175,9 @@ getdata(data,s)
 table(s$region,s$state)
 ```
 
-### 例2
+#### 例2
 
-```R
+```r
 # The same data as in Example 1
 # the method is 'systematic' (unequal probability, without replacement)
 # the selection probabilities are computed using the variable 'income'
@@ -195,9 +188,9 @@ getdata(data,s)
 table(s$region,s$state)
 ```
 
-### 例3
+#### 例3
 
-```R
+```r
 # Uses the 'swissmunicipalities' data as population for drawing a sample of units
 data(swissmunicipalities)
 # the variable 'REG' has 7 categories in the population
@@ -221,15 +214,13 @@ getdata(data, st)
 table(st$REG)
 ```
 
+## 大数据情况下的抽样
 
-
-# 大数据情况下的抽样
-
-## 随机抽样
+### 随机抽样
 
 以搜狗用户搜索日志数据为例：
 
-```R
+```r
 # 大数据情况下爱的随机抽样
 # 导入文件，只读
 data <- file("SogouQ.reduced", open = "r")
@@ -264,11 +255,9 @@ while (length(line) != 0) {
 1. 读取文件要只读参数，即`open = "r"`，否则，在`readLine()`时，会出现永远只读取第一行的情况；
 2. 要在循环之前定义`dataframe`，如这里的`df <- data.frame(c(0))`，否则循环内是找不到对象的。
 
+### grep\(\)
 
-
-## grep()
-
-```R
+```r
 > grep("a", "abc")
 [1] 1
 > grep("a", "aabc")
@@ -277,11 +266,9 @@ while (length(line) != 0) {
 integer(0)
 ```
 
+### 分层抽样
 
-
-## 分层抽样
-
-```R
+```r
 # 读取数据
 data <- file("titanic_data.csv", open = "r")
 line <- readLines(data, n=1)
@@ -311,13 +298,11 @@ while (length(line != 0)) {
 }
 ```
 
+## 描述统计
 
+### summary\(\)
 
-# 描述统计
-
-## summary()
-
-```R
+```r
 > # 使用mtcars数据集
 > mtcars
                      mpg cyl  disp  hp drat    wt  qsec vs am gear carb
@@ -371,17 +356,17 @@ Volvo 142E          21.4   4 121.0 109 4.11 2.780 18.60  1  1    4    2
  3rd Qu.:22.80   3rd Qu.:8.000   3rd Qu.:3.610  
  Max.   :33.90   Max.   :8.000   Max.   :5.424  
 > s2[, 2][1]
-                  
+
 "Min.   :4.000  " 
 > as.numeric(unlist(strsplit(s2, ":"))[2])
 [1] 10.4
 ```
 
-## stat.desc()
+### stat.desc\(\)
 
 来自`pastecs`包。
 
-```R
+```r
 > s3 <- stat.desc(data2)
 > s3
                      mpg         cyl          wt
@@ -403,9 +388,9 @@ coef.var       0.2999881   0.2886338   0.3041285
 [1] 4
 ```
 
-## 频数统计
+### 频数统计
 
-```R
+```r
 > table(mtcars$cyl, mtcars$vs, dnn = c("cyl", "vs"))
    vs
 cyl  0  1

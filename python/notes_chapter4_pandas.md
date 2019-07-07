@@ -243,7 +243,7 @@ array([  1.,   2.,   3.,   4.,  nan,   5.,  nan,  nan])
 3
 ```
 
-> 以上关于nan和None的区别部分内容了来自于[CSDN](https://blog.csdn.net/qq_33819591/article/details/77993590 )。
+> 以上关于nan和None的区别部分内容了来自于[CSDN](https://blog.csdn.net/qq_33819591/article/details/77993590%20)。
 
 **nan的判断**
 
@@ -304,8 +304,6 @@ green        NaN
 dtype: float64
 ```
 
-
-
 #### 10 Series对象之间的运算
 
 ```python
@@ -333,8 +331,6 @@ yellow    1500.0
 dtype: float64
 ```
 
-
-
 ### 4.5.2 DataFrame对象
 
 #### 1 定义DataFrame对象
@@ -351,8 +347,6 @@ yellow     4    5       6      7
 blue       8    9      10     11
 green     12   13      14     15
 ```
-
-
 
 #### 2 选取元素
 
@@ -465,8 +459,6 @@ blue       8    9      10     11  0.0
 green     12   13      14     15  2.0
 ```
 
-
-
 #### 4 元素所属关系
 
 ```python
@@ -491,8 +483,6 @@ green     12   13      14     15  2.0
 2   NaN  NaN     NaN    NaN
 3   NaN  NaN     NaN   15.0
 ```
-
-
 
 #### 5 删除一列
 
@@ -534,8 +524,6 @@ frame.drop(columns='ball')
 3   13      14
 ```
 
-
-
 #### 6 筛选
 
 ```python
@@ -556,8 +544,6 @@ frame.drop(columns='ball')
 3   NaN  NaN     NaN   NaN
 ```
 
-
-
 #### 7 用嵌套字典生成DataFrame
 
 ```python
@@ -569,8 +555,6 @@ frame.drop(columns='ball')
 2012  12.0     22    27
 2013  33.0     16    18
 ```
-
-
 
 #### 8 DataFrame转置
 
@@ -606,8 +590,6 @@ dtype: int64
 'green'
 ```
 
-
-
 #### 2 含有重复标签的Index
 
 ```python
@@ -628,8 +610,6 @@ dtype: int64
 >>>serd.index.is_unique
 False
 ```
-
-
 
 ## 4.6 索引对象的其他功能
 
@@ -692,8 +672,6 @@ dtype: float64
 4     0     0    0
 ```
 
-
-
 ### 4.6.2 删除
 
 见4.5.2 5 删除
@@ -754,8 +732,6 @@ yellow     8  NaN      8    8       8
 white     12  NaN     12   12      12
 ```
 
-
-
 ### 4.8 函数应用和映射
 
 ### 4.8.1 操作元素的函数
@@ -776,11 +752,9 @@ yellow  2.828427  3.000000  3.162278  3.316625
 white   3.464102  3.605551  3.741657  3.872983
 ```
 
-
-
 ### 4.8.2 按行或列执行操作的函数
 
-DataFrame.apply()按列，对一维数组进行运算；f返回标量，整体返回结果为一个Series。
+DataFrame.apply\(\)按列，对一维数组进行运算；f返回标量，整体返回结果为一个Series。
 
 ```python
 # 定义lambda函数
@@ -814,8 +788,6 @@ max    12   13      14     15
 min     0    1       2      3
 ```
 
-
-
 ### 4.8.3 统计函数
 
 ```python
@@ -843,11 +815,9 @@ min     0.000000   1.000000   2.000000   3.000000
 max    12.000000  13.000000  14.000000  15.000000
 ```
 
-
-
 ## 4.9 排序和排位次
 
-**Series的标签排序Series.sort_index()**
+**Series的标签排序Series.sort\_index\(\)**
 
 ```python
 >>> s = pd.Series(['a', 'b', 'c', 'd'], index=[3, 2, 1, 4])
@@ -896,11 +866,9 @@ NaN    d
 dtype: object
 ```
 
-**Series的元素排序Series.sort_value()**，用法和参数与Series.sort_index()相同。
+**Series的元素排序Series.sort\_value\(\)**，用法和参数与Series.sort\_index\(\)相同。
 
-
-
-**DataFrame的标签排序DataFrame.sort_index()**，参数大抵相同，只是如果要对列标签排序需要参数`axis=1`。
+**DataFrame的标签排序DataFrame.sort\_index\(\)**，参数大抵相同，只是如果要对列标签排序需要参数`axis=1`。
 
 ```python
 >>> frame.sort_index(axis=1, ascending=False, inplace=False, na_position='last')
@@ -911,7 +879,7 @@ yellow      10    9     11     8
 white       14   13     15    12
 ```
 
-**DataFrame的元素排列DataFrame.sort_value()**
+**DataFrame的元素排列DataFrame.sort\_value\(\)**
 
 `by`：可一个index或多个index组成的列表，行或列，行时axis=1。
 
@@ -938,9 +906,9 @@ yellow     11      10    9     8
 white      15      14   13    12
 ```
 
-**Pandas中的rank()方法——优先级问题**，排位次。
+**Pandas中的rank\(\)方法——优先级问题**，排位次。
 
-> 以下关于rank()函数解释来源于[CSDN](https://blog.csdn.net/ZOUZHEN_ID/article/details/82631745)。
+> 以下关于rank\(\)函数解释来源于[CSDN](https://blog.csdn.net/ZOUZHEN_ID/article/details/82631745)。
 
 首先，生成Series，并使用默认rank方法（默认使用平均排名方式,也就是说当出现相同元素的时候,优先级相加除以元素的个数）：
 
@@ -957,17 +925,14 @@ white      15      14   13    12
 dtype: float64
 ```
 
-
 例如-5对应的优先级为1,可按如下表示:
 
-```
+```text
 -5 -> 1.0 ;
  0 -> 2.0 ;  
 { 4 -> 4.0 ; 4 -> 5.0  ||   4 -> (4.0+5.0)/2=4.5 ; 4  (4.0+5.0)/2=4.5 }
 7 -> 6.5 ; 7 -> 6.5 ;
-
 ```
-
 
 当采用method=first时，此时按值的大小进行排序,元素相同时也不对其优先级进行平均.
 
@@ -982,7 +947,6 @@ dtype: float64
 6    5.0
 dtype: float64
 ```
-
 
 ## 4.10 相关性和方差
 
@@ -1060,8 +1024,6 @@ d   -0.119523
 dtype: float64
 ```
 
-
-
 ## 4.11 NaN数据
 
 pandas库在计算各种描述统计量时，其实没有考虑nan值。
@@ -1096,8 +1058,6 @@ s4
 4    9.0
 dtype: float64
 ```
-
-
 
 ### 4.11.2 过滤NaN
 
@@ -1142,8 +1102,6 @@ Index: []
 2  2.0 NaN  5.0
 ```
 
-
-
 ### 4.11.3 为NaN元素填充其他值
 
 通过`fillna()`函数**返回一个新**的`nan`被填充后的DataFrame。
@@ -1172,8 +1130,6 @@ Index: []
 1  0.0  1.0  2.0
 2  2.0  1.0  5.0
 ```
-
-
 
 ## 4.12 等级索引和分级
 
@@ -1290,8 +1246,6 @@ down   white  -0.571696 -2.304693  1.675079  0.178544
 up     red     1.312485 -0.444405 -0.366702  0.712684
 down   red     0.803027 -0.977137  2.062417  0.877883
 ```
-
-
 
 ### 4.12.2 按层级统计数据
 
