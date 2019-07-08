@@ -22,7 +22,7 @@ Click this website to view the main notes: https://amos-pvt.gitbook.io/data-anal
 
 笔记 ↓
 
-Probability Theory
+[Probability Theory](https://github.com/agoclover/data-analysis/blob/master/statistics/Probability_Theory.md)
 
 ## Statistics
 
@@ -32,7 +32,7 @@ Probability Theory
 
 笔记 ↓
 
-[Statistics Notes](https://github.com/agoclover/data-analysis/blob/master/statistics/Statistics%20Notes.md)
+[Statistics Notes](https://github.com/agoclover/data-analysis/blob/master/statistics/Statistics_Notes.md)
 
 ## Econometrics
 
