@@ -1,4 +1,4 @@
-# notes\_R\_4\_normal\_distribution
+# notes\_R\_normal\_distribution
 
 ## 生成正态分布数据
 
