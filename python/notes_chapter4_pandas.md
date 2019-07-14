@@ -1,4 +1,4 @@
-# 4. Pandas
+# Pandas
 
 ## 4.5 Pandas 数据结构简介
 

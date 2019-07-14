@@ -1,4 +1,4 @@
-# 3. NumPy库
+# NumPy
 
 笔记主要内容来自对Fabio Nelli所著的《Python数据分析实战》。
 

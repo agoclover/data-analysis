@@ -1,20 +1,26 @@
+---
+description: 'Hi, welcome to my learning notes!'
+---
+
 # README
 
-This repository records my personal experience of learning data analysis, which involves four main sections: **Statistics, Python, R and SQL**. 
+## README
+
+This repository records my personal experience of learning data analysis, which involves four main sections: **Statistics, Python, R and SQL**.
 
 All notes and files that you can easily get access to go through and download, have been uploaded to this repository. These notes refers to a large number of other scholars' research and blog materials which have been listed in detail.
 
-Click this website to view the main notes: https://amos-pvt.gitbook.io/data-analysis/
+Click this website to view the main notes: [https://amos-pvt.gitbook.io/data-analysis/](https://amos-pvt.gitbook.io/data-analysis/)
 
+When you are brwosing the gitbook, you can click the link transfering to github files.
 
-
-# Statistics
+## Statistics
 
 统计学知识是数据分析的理论基础，尽管流行的数据分析工具比如Python和R都有很多现成的包可以使用，但理解其原理是至关重要的，否则很容易出现不考虑样本是否满足某些检验方法而错误套用所造成的严重后果。
 
 这一部分主要包括三个方面，概率论和统计基础，以及线性回归——计量经济学。掌握好这些内容也就掌握了绝大多数数据分析所需要的理论知识。之后，所学习的数据挖掘内容会在其他仓库中记录和展示。
 
-## Probability Theory
+### Probability Theory
 
 概率论是数理统计的基石。
 
@@ -24,7 +30,7 @@ Click this website to view the main notes: https://amos-pvt.gitbook.io/data-anal
 
 [Probability Theory](https://github.com/agoclover/data-analysis/blob/master/statistics/Probability_Theory.md)
 
-## Statistics
+### Statistics
 
 这部分主要是统计学知识的复习，包含描述统计学和推论统计学。但是，为了更好地记录所学的知识，我将以下两部分的笔记内容放在了《概率论与数理统计》的框架内，以便形成更好的知识体系。
 
@@ -34,7 +40,7 @@ Click this website to view the main notes: https://amos-pvt.gitbook.io/data-anal
 
 [Statistics Notes](https://github.com/agoclover/data-analysis/blob/master/statistics/Statistics_Notes.md)
 
-## Econometrics
+### Econometrics
 
 学习完统计学并理解和掌握参数估计和假设检验等重要工具之后，有必要学习计量经济学来**练兵**。而且，这一部分和凸优化的学习，能够很好地为机器学习做铺垫。
 
@@ -50,11 +56,9 @@ Click this website to view the main notes: https://amos-pvt.gitbook.io/data-anal
 
 Regression Models
 
+## Python
 
-
-# Python
-
-### Fabio Nelli
+#### Fabio Nelli
 
 refer to **Python Data Analytics** written by Fabio Nelli. Notes are below:
 
@@ -62,9 +66,9 @@ refer to **Python Data Analytics** written by Fabio Nelli. Notes are below:
 2. [chapter4\_Pandas](https://github.com/agoclover/data-analysis/blob/master/python/notes_chapter4_pandas.md)
 3. to be continued.
 
-### Udacity
+#### Udacity
 
-#### Python 数据分析入门
+**Python 数据分析入门**
 
 以udacity学生学习参与数据为例，数据集：
 
@@ -76,7 +80,7 @@ refer to **Python Data Analytics** written by Fabio Nelli. Notes are below:
 
 [Getting started with data analysis.ipynb](https://github.com/agoclover/data-analysis/blob/master/python/Getting%20started%20with%20data%20analysis.ipynb)
 
-#### NumPy 和 Pandas 分析一维数据
+**NumPy 和 Pandas 分析一维数据**
 
 指导手册：
 
@@ -94,7 +98,7 @@ refer to **Python Data Analytics** written by Fabio Nelli. Notes are below:
 
 [One\_dimensional\_data\_analysis.ipynb](https://github.com/agoclover/data-analysis/blob/master/python/One_dimensional_data_analysis.ipynb)
 
-#### NumPy 和 Pandas 分析二维数据
+**NumPy 和 Pandas 分析二维数据**
 
 以纽约地铁站客流量数据为例，数据集：
 
@@ -105,11 +109,9 @@ refer to **Python Data Analytics** written by Fabio Nelli. Notes are below:
 
 [Two\_dimensional\_data\_analysis.ipynb](https://github.com/agoclover/data-analysis/blob/master/python/Two_dimensional_data_analysis.ipynb)
 
-#### Project：探索数据集
+**Project：探索数据集**
 
-
-
-# R
+## R
 
 学习课程参考了[阿雷边学边教](https://www.bilibili.com/video/av6268508)，并自己做了大量的补充。从第六章回归分析开始都是自己总结的内容。
 
@@ -120,11 +122,9 @@ refer to **Python Data Analytics** written by Fabio Nelli. Notes are below:
 3. [sample.md](https://github.com/agoclover/data-analysis/blob/master/R/notes_R_sample.md) 
 4. [normal\_distribution.md](https://github.com/agoclover/data-analysis/blob/master/R/notes_R_4_normal_distribution.md) 
 5. [parameter\_estimation\_hypothesis\_testing.md](https://github.com/agoclover/data-analysis/blob/master/R/notes_R_5_parameter_estimation_hypothesis%20_testing.md)
-6. regression_models.md
+6. regression\_models.md
 
-
-
-# SQL
+## SQL
 
 通过学习MySql数据库，并使用Navicat数据库图形化软件来学习SQL。
 
