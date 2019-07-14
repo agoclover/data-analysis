@@ -1,4 +1,4 @@
-# notes\_R\_5\_parameter\_estimation\_hypothesis \_testing
+# notes\_R\_parameter\_estimation\_hypothesis \_testing
 
 ## 四个重要函数
 
